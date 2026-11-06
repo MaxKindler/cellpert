@@ -1,0 +1,19 @@
+# Data and model checkpoints (too large for git; see README.md, section "Data")
+/data/*
+/models/*
+
+# Weights & Biases run directories
+/src/wandb/*
+wandb/
+
+# Generated plots of individual runs
+/plots/violin_transformer_flow/*
+/plots/violin_transformer_flow
+/plots/violin/*
+
+# Other / local
+/src/vcc/*
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.claude/

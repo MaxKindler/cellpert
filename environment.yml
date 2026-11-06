@@ -1,0 +1,13 @@
+# Conda environment for this repository (see README.md, section "Setup").
+#   conda env create -f environment.yml
+#   conda activate cellpert
+# All Python packages are installed with pip from requirements.txt, which pins the
+# exact versions used for the thesis experiments.
+name: cellpert
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - -r requirements.txt

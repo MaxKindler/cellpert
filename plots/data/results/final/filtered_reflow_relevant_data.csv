@@ -1,0 +1,3 @@
+,seed,reflow,de_test_score,de_precision_test_score,de_recall_test_score,energy_test_score,mse_test_loss,reflow-1_de_test_score,reflow-1_de_precision_test_score,reflow-1_de_recall_test_score,reflow-1_energy_test_score,reflow-1_mse_test_loss,reflow-2_de_test_score,reflow-2_de_precision_test_score,reflow-2_de_recall_test_score,reflow-2_energy_test_score,reflow-2_mse_test_loss
+mean,292074.0,2.0,0.4348,0.597,0.3611,0.0719,0.3389,0.4093,0.6328,0.3116,0.0802,0.3255,0.3948,0.6043,0.302,0.0957,0.3176
+std,188456.3373,0.0,0.0276,0.04,0.0324,0.0057,0.0027,0.0337,0.0549,0.0388,0.0048,0.0025,0.0295,0.0437,0.0354,0.0067,0.0024

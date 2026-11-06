@@ -1,0 +1,67 @@
+# wandb Bayesian hyperparameter sweep for the cell-attention Transformer (python run.py --architecture transformer_cellattention --task SEEN --run_sweep).
+# Parameters not listed here are taken from transformer_config.py. Optimised metric: validation DE-F1.
+
+transformer_sweep_config = {
+    'method': 'bayes', 
+    'metric': {
+        'name': 'de_val_score',
+        'goal': 'maximize'
+    },
+    'early_terminate':{
+        'type': 'hyperband',
+        'min_iter': 70,
+        'eta': 3
+    },
+    'parameters': {
+        'learning_rate':{
+            'distribution': 'log_uniform_values',
+            'min': 1e-6,
+            'max': 1e-4
+        },
+        'epochs': {
+            'distribution': 'constant',
+            'value': 100
+        },
+        'batch_size': {
+            'values': [32, 64, 128, 256, 512] # No batch_size < 32 because of perperturbation sampler
+        },
+        'loss_function': {
+            'values': ['EnergyLoss']
+        },
+        'perturbations': {
+            'values': [["BI-3406", "Capmatinib", "Paclitaxel", "Oxaliplatin", "Gemcitabine", "Vemurafenib", "Anastrozole", "Minodronic acid", "Everolimus", "Adagrasib"]]
+        },
+        'hidden_size': {
+            'values': [256, 512, 1024, 2048, 4096, 8192]
+        },
+        'num_heads': {
+            'values': [2, 4, 8, 16]
+        },
+        'num_layers': {
+            'values': [1, 2, 4]
+        },
+        'architecture': {
+            'values': ['Transformer']
+        },
+        'dataset': {
+            'values': ['tahoe100M_SW480_filtered_1024']
+        },
+        'weight_decay': {
+            'distribution': 'log_uniform_values',
+            'min': 1e-6,
+            'max': 5e-2
+        },
+        'dropout': {
+            'distribution': 'uniform',
+            'min': 0.0,
+            'max': 0.5
+        },
+        'embedding_dim': {
+            'values': [64, 128, 256, 512]
+        },
+        'HVG_GENE_NUMBER': {
+            'values': [1024]
+        }
+        
+    }
+}

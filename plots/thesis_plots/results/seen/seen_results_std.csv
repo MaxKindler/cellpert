@@ -1,0 +1,6 @@
+Model,de_test_score,de_precision_test_score,de_recall_test_score,energy_test_score,mse_test_loss
+Transformer,0.0373,0.0523,0.0468,0.0017,0.0041
+Rectified Flow,0.0412,0.0898,0.0522,0.0079,0.0055
+TransformerFlow,0.0432,0.0712,0.0498,0.0036,0.0032
+Mean Baseline,0.0062,0.0034,0.0244,0.0045,0.0004
+Mean Shift Baseline,0.0077,0.0044,0.0163,0.001,0.0014

@@ -1,6 +1,8 @@
 # Data and model checkpoints (too large for git; see README.md, section "Data")
 /data/*
+!/data/.gitkeep
 /models/*
+!/models/.gitkeep
 
 # Weights & Biases run directories
 /src/wandb/*
